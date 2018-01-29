@@ -1,0 +1,18 @@
+<div class="container">
+  <app-modal-add-book #modal></app-modal-add-book>
+  <app-modal-delete-book #deleteBook></app-modal-delete-book>
+
+  <h2>Books page</h2>
+  <hr>
+  <div class="btn btn-primary" style="margin-bottom: 20px" (click)="modal.openModal()">Add book</div>
+  <br>
+  <div>
+    <div class="row">
+      <div *ngFor="let book of books">
+        <app-book [book]="book" [modal]='modal' [deleteBook]="deleteBook"></app-book>
+      </div>
+    </div>
+  </div>
+</div>
+
+

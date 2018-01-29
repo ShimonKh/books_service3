@@ -1,0 +1,25 @@
+<div class="col-sm-4 col-md-3">
+  <div class="book-card">
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <p class="crop">{{book.author | lengthAuthor }}</p>
+        <h5 class="crop">{{ book.title | titlePipe | lengthTitle }}</h5>
+        <div class="book-card-date">{{book.date | date: "mediumDate"}}</div>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div>
+          <i
+            class="fa fa-edit icon-edit"
+            (click)="modal.openModal(book)"
+          ></i>
+        </div>
+        <div>
+          <i
+            class="fa fa-remove icon-delete"
+            (click)="deleteBook.openModal(book)"
+          ></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
